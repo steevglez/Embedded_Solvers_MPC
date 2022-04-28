@@ -1,28 +1,53 @@
 # Model Predictive Control en C++ (CPU). 
 
-Estos códigos C++ implementan MPC y PDIP. PDIP hace uso de OpenBLAS para algunas operaciones de matrices y dos linear solvers.
+Estos códigos C++ implementan MPC y OSQP.
 
 ## Requerimientos
 
+Para compilar los codigos de OSQP se necesita tener instalado el programa **cmake**.
 
-Para utilizar estos códigos se necesita tener la biblioteca **OpenBLAS** instalada.
+### Instalar cmake
 
-### Instalar OpenBLAS
+- Se puede instalar **cmake** por medio del comando:
 
-- Clonar el repositorio de OpenBLAS
+  `sudo apt-get -y instalar cmake`
+  
+### Script
 
-  `git clone git@github.com:xianyi/OpenBLAS.git`
-- Compilar OpenBLAS
+Se incluye un script para la compilacion de OSQP y codigos que implementan MPC, ademas de la ejecucion de un ejemplo con N=4. Para ejecutar este script se deben otorgar permisos de ejecucion por medio de:
 
-  `cd OpenBLAS`
+  `chmod +x setup_osqp.sh`
+  
+Luego, ejecutar el script por medio de:
 
-  `make`
+`./setup_osqp.sh`
 
-  `make install`
+Esto tomara los archivos del solver, los compilara, eliminara algunos archivos para evitar conflictos entre los makefile, finalmente ejecutara el archivo makefile del codigo MPC y ejecutara a estos codigos a modo de ejemplo. La compilacion de archivos del solver y ejecucion de los codigos MPC se puede visualizar por medio de la terminal.
 
-  por defecto queda instalado en */opt/OpenBLAS*
+## Modo de uso - Ejecucion, muestras(samples) y salida de datos
 
-### Muestras (samples)
+Una vez ejecutado el script y verificar la compilacion y ejecucion del ejemplo por terminal, se obtendra el ejecutable **runner** con horizonte de prediccion N=4 por defecto. Para ejecutar este programa con distintas configuraciones de muestras, salidas de datos e iteraciones, se debe ejecutar con el siguiente comando
+
+`./runner samplesMPC_N[HOR_PREDIC_MUESTRAS].txt [OUTPUT_DATOS] [OUTPUT_TIEMPO] [NUM_ITERACIONES] [NUMERO_EJECUCION]`
+
+Donde:
+
+samplesMPC_N[HOR_PREDIC_MUESTRAS].txt - 
+
+[OUTPUT_DATOS] -
+
+[OUTPUT_TIEMPO] -
+
+[NUM_ITERACIONES] -
+
+[NUMERO_EJECUCION] -
+
+========================================
+
+### Muestras(samples) y salida de datos
+
+Cada ejecucion de codigo debe ir junto a una archivo de muestras, samplesMPC_N4.txt en este caso.
+
 Se tienen que tener las muestras generadas por el código *servoMPCReferenceTracking.m* con el horizonte de predicción que se va a utilizar. Para generar estas muestras seguir las instrucciones en GenerateSamplesMATLAB/Readme.md
 
 ## Modo de uso
