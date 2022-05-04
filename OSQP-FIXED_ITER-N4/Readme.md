@@ -1,4 +1,4 @@
-# Model Predictive Control en C++ (CPU). 
+# Model Predictive Control con OSQP en C++ 
 
 Estos códigos C++ implementan MPC y utilizando al solver OSQP.
 
