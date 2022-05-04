@@ -24,12 +24,12 @@ Luego, ejecutar el script:
 
 Este script compilara los archivos del solver, eliminara algunas carpetas para evitar conflictos entre los makefile, ejecutara el makefile del codigo MPC y lo ejecutara a modo de ejemplo. Si todo ha salido bien, la compilacion de archivos del solver y ejecucion de los codigos MPC se puede visualizar por medio de la terminal. Una salida de referencia generada por los codigos MPC es la siguiente:
 
-MPC testbench
-Finished processing 10000 samples
-Number of differences between expected and calculated:	6256
-Threshold: 0.0001
-
 ```
+> MPC testbench
+> Finished processing 10000 samples
+> Number of differences between expected and calculated:	6256
+> Threshold: 0.0001
+
 > MPC TIMER
 > Mean time running application in software: 		5.162892µs
 > Standard deviation running application in software: 	1.49691743844408µs
