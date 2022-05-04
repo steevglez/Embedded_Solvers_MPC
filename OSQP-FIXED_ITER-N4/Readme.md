@@ -67,15 +67,19 @@ Donde:
 
 El formato del archivo de salidas(OUT) es el siguiente:
 
-actuacion_1, vel.ang_1, pos.ang_1
-actuacion_2, vel.ang_2, pos.ang_2
-actuacion_3, vel.ang_3, pos.ang_3
+| Columna 1 | Columna 2 | Columna 3 |
+| ------------- | ------------- | ------------- |
+| actuacion_1  | vel.ang_1  | pos.ang_1 |
+| actuacion_2  | vel.ang_2  | pos.ang_2 |
+| actuacion_3  | vel.ang_3  | pos.ang_3 |
 
 El formato del archivo de tiempo(TIME) es el siguiente:
 
-tiempo_lazo_1, tiempo_solver_1 //
-tiempo_lazo_2, tiempo_solver_2 //
-tiempo_lazo_3, tiempo_solver_3 //
+| Columna 1 | Columna 2 |
+| ------------- | ------------- |
+| tiempo_lazo_1  | tiempo_solver_1  |
+| tiempo_lazo_2  | tiempo_solver_2  |
+| tiempo_lazo_3  | tiempo_solver_3  |
 
 ### Creacion de muestras(samples)
 
