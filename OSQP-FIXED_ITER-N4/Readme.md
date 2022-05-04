@@ -8,7 +8,7 @@ Para compilar los codigos de OSQP se necesita tener instalado el programa **cmak
 
 ### Instalar cmake
 
-- Se instala **cmake** por medio del comando:
+Se instala **cmake** por medio del comando:
 
   `sudo apt-get -y install cmake`
   
@@ -30,19 +30,19 @@ Este script compilara los archivos del solver, eliminara algunas carpetas para e
 
 Una vez ejecutado el script y se ha verificado la compilacion y ejecucion del ejemplo por terminal, se obtendra el ejecutable **runner** con horizonte de prediccion N=4 por defecto. Para ejecutar este programa con distintas configuraciones de muestras, salidas de datos e iteraciones, se debe utilizar el siguiente comando:
 
-`./runner samplesMPC_N[HOR_PREDIC_MUESTRAS].txt [OUTPUT_DATOS] [OUTPUT_TIEMPO] [NUM_ITERACIONES] [NUMERO_EJECUCION]`
+  `./runner samplesMPC_N[HOR_PREDIC_MUESTRAS].txt [OUTPUT_DATOS] [OUTPUT_TIEMPO] [NUM_ITERACIONES] [NUMERO_EJECUCION]`
 
 Donde:
 
-samplesMPC_N[HOR_PREDIC_MUESTRAS].txt - Es el archivo de muestras obtenidas de MATLAB, HOR_PREDIC_MUESTRAS indica el horizonte de prediccion utilizado para crear las muestras
+- samplesMPC_N[HOR_PREDIC_MUESTRAS].txt - Es el archivo de muestras obtenidas de MATLAB, HOR_PREDIC_MUESTRAS indica el horizonte de prediccion utilizado para crear las muestras
 
-[OUTPUT_DATOS]: Valor binario para habilitar(1) o deshabilitar(0) la salida de datos como actuacion y variables de estado del sistema en un archivo csv.
+- [OUTPUT_DATOS]: Valor binario para habilitar(1) o deshabilitar(0) la salida de datos como actuacion y variables de estado del sistema en un archivo csv.
 
-[OUTPUT_TIEMPO]: Valor binario para habilitar(1) o deshabilitar(0) la salida de datos como tiempo de ejecucion del solver y lazo MPC en un archivo csv.
+- [OUTPUT_TIEMPO]: Valor binario para habilitar(1) o deshabilitar(0) la salida de datos como tiempo de ejecucion del solver y lazo MPC en un archivo csv.
 
-[NUM_ITERACIONES] - Parametro para indicar el maximo numero de iteraciones permitidas
+- [NUM_ITERACIONES] - Parametro para indicar el maximo numero de iteraciones permitidas
 
-[NUMERO_EJECUCION] - Parametro que agrega un numero o tag a los resultados de salidas o tiempo de los codigos
+- [NUMERO_EJECUCION] - Parametro que agrega un numero o tag a los resultados de salidas o tiempo de los codigos
 
 En caso de ser necesario cambiar la precision entre single y double o cambiar el horizonte de prediccion, antes de compilar se debe modificar en el header file *source/specs.h* el horizonte de predicción que se utilizará `#define N_QP 4` y se debe descomentar la linea `#define ELEM_FLOAT` o `#define ELEM_DOUBLE` para fijar el tamaño de punto flotante que se va a ocupar. Para compilar nuevamente se debe correr el makefile por medio de:
 
@@ -59,11 +59,11 @@ Los archivos de salida generados tienen por nombre csv_qpoasesMPC[N]x[N]OUT_iter
  
 Donde: 
 
-[N]: Al igual que HOR_PREDIC_MUESTRAS, indica el horizonte de prediccion utilizado.
+- [N]: Al igual que HOR_PREDIC_MUESTRAS, indica el horizonte de prediccion utilizado.
 
-[NUM_ITERACIONES] - Indicador de maximo numero de iteraciones permitidas utilizado para generar los resultados.
+- [NUM_ITERACIONES] - Indicador de maximo numero de iteraciones permitidas utilizado para generar los resultados.
 
-[NUMERO_EJECUCION] - Indicador o tag de resultados de salidas o tiempo de la ejecucion de los codigos.
+- [NUMERO_EJECUCION] - Indicador o tag de resultados de salidas o tiempo de la ejecucion de los codigos.
 
 El formato del archivo de salidas(OUT) es el siguiente:
 
@@ -87,11 +87,11 @@ Se tienen que tener las muestras generadas por el código *servoMPCReferenceTrac
 
 ## Descripción de cada código
 
-MPCTestbenchSW.cpp: Archivo principal, encargado de cargar los datos y parametros, como tambien convocar las funciones de lazo MPC.
-mpcSW.cpp: Archivo donde se describen las operaciones del lazo MPC, como actualizar matrices h y c.
-osqpSW.cpp: Se utilizan las funciones del solver para resolver los problemas QP generados por el lazo MPC
-tictoc.cpp: Implementacion del reloj utilizado para medir tiempos de ejecucion
-specs.h: Archivo de configuracion como precision single o double, como tambien dimensiones de las matrices segun el horizonte de prediccion.
+- MPCTestbenchSW.cpp: Archivo principal, encargado de cargar los datos y parametros, como tambien convocar las funciones de lazo MPC.
+- mpcSW.cpp: Archivo donde se describen las operaciones del lazo MPC, como actualizar matrices h y c.
+- osqpSW.cpp: Se utilizan las funciones del solver para resolver los problemas QP generados por el lazo MPC
+- tictoc.cpp: Implementacion del reloj utilizado para medir tiempos de ejecucion
+- specs.h: Archivo de configuracion como precision single o double, como tambien dimensiones de las matrices segun el horizonte de prediccion.
 
 TO DO
 <!---
