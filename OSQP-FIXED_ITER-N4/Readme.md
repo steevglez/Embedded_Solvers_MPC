@@ -29,16 +29,18 @@ Finished processing 10000 samples
 Number of differences between expected and calculated:	6256
 Threshold: 0.0001
 
+```
 > MPC TIMER
 > Mean time running application in software: 		5.162892µs
 > Standard deviation running application in software: 	1.49691743844408µs
-Max running application in software: 			63µs
-Min running application in software: 			4.879µs
-SOLVER TIMER
-Mean time running application in software: 		4.7291981µs
-Standard deviation running application in software: 	1.3152627483762µs
-Max running application in software: 			53.792µs
-Min running application in software: 			4.469µs
+> Max running application in software: 			63µs
+> Min running application in software: 			4.879µs
+> SOLVER TIMER
+> Mean time running application in software: 		4.7291981µs
+> Standard deviation running application in software: 	1.3152627483762µs
+> Max running application in software: 			53.792µs
+> Min running application in software: 			4.469µs
+```
 
 ## Modo de uso - Ejecucion, muestras(samples) y salida de datos
 
