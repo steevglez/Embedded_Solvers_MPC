@@ -14,7 +14,7 @@ Se instala **cmake** por medio del comando:
   
 ### Uso de script de setup
 
-Se incluye un script para la compilacion de OSQP y los codigos que implementan MPC, ademas se realiza la ejecucion de un ejemplo con un horizonte de prediccion N=4. Para ejecutar este script se deben otorgar permisos de ejecucion por medio de:
+Se incluye un script para la compilacion de OSQP y los codigos que implementan MPC, ademas realiza la ejecucion de un ejemplo con un horizonte de prediccion N=4. Para ejecutar este script se deben otorgar permisos de ejecucion por medio de:
 
   `chmod +x setup_osqp.sh`
   
@@ -22,7 +22,7 @@ Luego, ejecutar el script por medio de:
 
   `./setup_osqp.sh`
 
-Este script compilara los archivos del solver, eliminara algunas carpetas para evitar conflictos entre los makefile y finalmente ejecutara el archivo makefile del codigo MPC a modo de ejemplo. Si todo ha salido bien, la compilacion de archivos del solver y ejecucion de los codigos MPC se puede visualizar por medio de la terminal. Una salida de referencia generada por los codigos MPC es la siguiente:
+Este script compilara los archivos del solver, eliminara algunas carpetas para evitar conflictos entre los makefile, ejecutara el makefile del codigo MPC y lo ejecutara a modo de ejemplo. Si todo ha salido bien, la compilacion de archivos del solver y ejecucion de los codigos MPC se puede visualizar por medio de la terminal. Una salida de referencia generada por los codigos MPC es la siguiente:
 
 **salida de referencia**
 
