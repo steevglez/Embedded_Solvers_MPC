@@ -83,6 +83,12 @@ Se tienen que tener las muestras generadas por el código *servoMPCReferenceTrac
 
 ## Descripción de cada código
 
+MPCTestbenchSW.cpp: Archivo principal, encargado de cargar los datos y parametros, como tambien convocar las funciones de lazo MPC.
+mpcSW.cpp: Archivo donde se describen las operaciones del lazo MPC, como actualizar matrices h y c.
+osqpSW.cpp: Se utilizan las funciones del solver para resolver los problemas QP generados por el lazo MPC
+tictoc.cpp: Implementacion del reloj utilizado para medir tiempos de ejecucion
+specs.h: Archivo de configuracion como precision single o double, como tambien dimensiones de las matrices segun el horizonte de prediccion.
+
 TO DO
 <!---
 + *ABcal.m*
