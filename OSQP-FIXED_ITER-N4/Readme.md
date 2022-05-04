@@ -54,8 +54,12 @@ No olvidar que cada ejecucion de codigo debe ir junto a una archivo de muestras 
 
 ### Archivos de salida
 
-Los archivos de salida generados tienen por nombre csv_qpoasesMPC[N]x[N]OUT_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
- csv_qpoasesMPC[N]x[N]TIME_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION], nombre de archivo para variables de estado y tiempos de ejecucion respectivamente.
+Los archivos de salida generados tienen por nombre 
+
+- csv_osqpMPC[N]x[N]OUT_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
+- csv_osqpMPC[N]x[N]TIME_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
+
+Nombre de archivo para variables de estado y tiempos de ejecucion, respectivamente.
  
 Donde: 
 
