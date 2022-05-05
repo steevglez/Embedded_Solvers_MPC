@@ -1,6 +1,6 @@
-# Model Predictive Control con OSQP en C++ 
+# Model Predictive Control con qpOASES en C++ 
 
-Estos códigos C++ implementan MPC y utilizando al solver OSQP.
+Estos códigos C++ implementan MPC y utilizando al solver qpOASES.
 
 ## Requerimientos y preparativos
 
@@ -14,7 +14,7 @@ Se instala **cmake** por medio del comando:
   
 ### Uso de script de setup
 
-Se incluye un script para la compilacion de OSQP y los codigos que implementan MPC, ademas realiza la ejecucion de un ejemplo con un horizonte de prediccion N=4. Para ejecutar este script se deben otorgar permisos de ejecucion por medio de:
+Se incluye un script para la compilacion de qpOASES y los codigos que implementan MPC, ademas realiza la ejecucion de un ejemplo con un horizonte de prediccion N=4. Para ejecutar este script se deben otorgar permisos de ejecucion por medio de:
 
   `chmod +x setup_osqp.sh`
   
@@ -78,8 +78,8 @@ No olvidar que cada ejecucion de codigo debe ir junto a una archivo de muestras 
 
 Los archivos de salida generados tienen por nombre 
 
-- csv_osqpMPC[N]x[N]OUT_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
-- csv_osqpMPC[N]x[N]TIME_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
+- csv_qpoasesMPC[N]x[N]OUT_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
+- csv_qpoasesMPC[N]x[N]TIME_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
 
 Nombre de archivo para variables de estado y tiempos de ejecucion, respectivamente.
  
