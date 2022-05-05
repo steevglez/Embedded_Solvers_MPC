@@ -60,6 +60,12 @@ Donde:
 
 - [NUMERO_EJECUCION] - Parametro que agrega un numero o tag a los resultados de salidas o tiempo de los codigos
 
+Por ejemplo, el comando:
+
+  `./runner samplesMPC_N4.txt 1 0 10 5`
+  
+Cargara datos desde el archivo samplesMPC_N4.txt, generara un archivo csv con las variables de salida del sistema, no generara el archivo de tiempos de ejecucion, realizara hasta un maximo de 10 iteraciones y el archivo de salida tendra el tag 5.
+
 En caso de ser necesario cambiar la precision entre single y double o cambiar el horizonte de prediccion, antes de compilar se debe modificar en el header file *source/specs.h* el horizonte de predicción que se utilizará `#define N_QP 4` y se debe descomentar la linea `#define ELEM_FLOAT` o `#define ELEM_DOUBLE` para fijar el tamaño de punto flotante que se va a ocupar. Para compilar nuevamente se debe correr el makefile por medio de:
 
  `make`
