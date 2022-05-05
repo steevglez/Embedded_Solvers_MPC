@@ -1,0 +1,7 @@
+Para compilar solo un codigo, junto a la carpeta de codigos fuente de qpOASES, se debe ingresar el comando:
+
+g++ qpoases5x5_1.cpp -IqpOASES_FOLDER/include qpOASES_FOLDER/build/libs/libqpOASES.a -o qpoases5x5_1
+
+Luego, para ejecutar:
+
+./qpoases5x5_1
