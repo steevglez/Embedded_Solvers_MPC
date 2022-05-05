@@ -16,11 +16,11 @@ Se instala **cmake** por medio del comando:
 
 Se incluye un script para la compilacion de qpOASES y los codigos que implementan MPC, ademas realiza la ejecucion de un ejemplo con un horizonte de prediccion N=4. Para ejecutar este script se deben otorgar permisos de ejecucion por medio de:
 
-  `chmod +x setup_osqp.sh`
+  `chmod +x setup_qpoases.sh`
   
 Luego, ejecutar el script:
 
-  `./setup_osqp.sh`
+  `./setup_qpoases.sh`
 
 Este script compilara los archivos del solver, eliminara algunas carpetas para evitar conflictos entre los makefile, ejecutara el makefile del codigo MPC y lo ejecutara a modo de ejemplo. Si todo ha salido bien, la compilacion de archivos del solver y ejecucion de los codigos MPC se puede visualizar por medio de la terminal. Una salida de referencia generada por los codigos MPC es la siguiente:
 
