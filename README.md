@@ -11,10 +11,6 @@ Los codigos confeccionados en este trabajo se encuentran en las carpetas [qpOASE
 
 ---
 
-## Replicar resultados
-
-Para replicar los resultados se debe 
-
 ### Código Matlab
 
 
