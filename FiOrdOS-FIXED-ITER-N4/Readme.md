@@ -1,20 +1,16 @@
-# Model Predictive Control con OSQP en C++ 
+# Model Predictive Control con FiOrdOS en C++ 
 
-Estos códigos C++ implementan MPC y utilizando al solver OSQP.
+Estos códigos C++ implementan MPC y utilizando al solver FiOrdOS.
 
 ## Requerimientos y preparativos
 
-Para compilar los codigos de OSQP se necesita tener instalado el programa **cmake**.
+A diferencia de los demas solver, este solver no necesita el programa **cmake**, por lo que podemos ejecutar directamente el comando:
 
-### Instalar cmake
-
-Se instala **cmake** por medio del comando:
-
-  `sudo apt-get -y install cmake`
+  `make`
   
 ### Uso de script de setup
 
-Se incluye un script para la compilacion de OSQP y los codigos que implementan MPC, ademas realiza la ejecucion de un ejemplo con un horizonte de prediccion N=4. Para ejecutar este script se deben otorgar permisos de ejecucion por medio de:
+De todas formas, tambien se incluye un script para la compilacion de FiOrdOS y los codigos que implementan MPC, ademas realiza la ejecucion de un ejemplo con un horizonte de prediccion N=4. Para ejecutar este script se deben otorgar permisos de ejecucion por medio de:
 
   `chmod +x setup_osqp.sh`
   
@@ -22,7 +18,7 @@ Luego, ejecutar el script:
 
   `./setup_osqp.sh`
 
-Este script compilara los archivos del solver, eliminara algunas carpetas para evitar conflictos entre los makefile, ejecutara el makefile del codigo MPC y lo ejecutara a modo de ejemplo. Si todo ha salido bien, la compilacion de archivos del solver y ejecucion de los codigos MPC se puede visualizar por medio de la terminal. Una salida de referencia generada por los codigos MPC es la siguiente:
+Este script compilara los archivos del solver, ejecutara el makefile del codigo MPC y lo ejecutara a modo de ejemplo. Si todo ha salido bien, la compilacion de archivos del solver y ejecucion de los codigos MPC se puede visualizar por medio de la terminal. Una salida de referencia generada por los codigos MPC es la siguiente:
 
 ```
 > MPC testbench
@@ -78,8 +74,8 @@ No olvidar que cada ejecucion de codigo debe ir junto a una archivo de muestras 
 
 Los archivos de salida generados tienen por nombre 
 
-- csv_osqpMPC[N]x[N]OUT_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
-- csv_osqpMPC[N]x[N]TIME_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
+- csv_fiordosMPC[N]x[N]OUT_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
+- csv_fiordosMPC[N]x[N]TIME_iter[NUM_ITERACIONES]_[NUMERO_EJECUCION]
 
 Nombre de archivo para variables de estado y tiempos de ejecucion, respectivamente.
  
