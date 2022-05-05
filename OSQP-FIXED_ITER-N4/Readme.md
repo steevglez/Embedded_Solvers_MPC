@@ -42,7 +42,7 @@ Este script compilara los archivos del solver, eliminara algunas carpetas para e
 > Min running application in software: 			4.469µs
 ```
 
-## Modo de uso - Ejecucion, muestras(samples) y salida de datos
+## Modo de uso - Ejecucion y salida de datos
 
 Una vez ejecutado el script y se ha verificado la compilacion y ejecucion del ejemplo por terminal, se obtendra el ejecutable **runner** con horizonte de prediccion N=4 por defecto. Para ejecutar este programa con distintas configuraciones de muestras, salidas de datos e iteraciones, se debe utilizar el siguiente comando:
 
@@ -107,10 +107,6 @@ El formato del archivo de tiempo(TIME) es el siguiente:
 | tiempo_lazo_2  | tiempo_solver_2  |
 | tiempo_lazo_3  | tiempo_solver_3  |
 
-### Creacion de muestras(samples)
-
-Se tienen que tener las muestras generadas por el código *servoMPCReferenceTracking.m* con el horizonte de predicción que se va a utilizar. Para generar estas muestras seguir las instrucciones en GenerateSamplesMATLAB/Readme.md
-
 ## Descripción de cada código
 
 - MPCTestbenchSW.cpp: Archivo principal, encargado de cargar los datos y parametros, como tambien convocar las funciones de lazo MPC.
@@ -118,6 +114,10 @@ Se tienen que tener las muestras generadas por el código *servoMPCReferenceTrac
 - osqpSW.cpp: Se utilizan las funciones del solver para resolver los problemas QP generados por el lazo MPC
 - tictoc.cpp: Implementacion del reloj utilizado para medir tiempos de ejecucion
 - specs.h: Archivo de configuracion como precision single o double, como tambien dimensiones de las matrices segun el horizonte de prediccion.
+
+### Creacion de muestras(samples)
+
+Se tienen que tener las muestras generadas por el código *servoMPCReferenceTracking.m* con el horizonte de predicción que se va a utilizar. Para generar estas muestras seguir las instrucciones en GenerateSamplesMATLAB/Readme.md
 
 TO DO
 <!---
