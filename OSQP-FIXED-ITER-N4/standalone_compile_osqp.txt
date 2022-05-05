@@ -1,0 +1,7 @@
+Para compilar solo un codigo, junto a la carpeta de codigos fuente de OSQP, se debe ingresar el comando:
+
+g++ osqp5x5_1.cpp -IOSQP_FOLDER/include OSQP_FOLDER/lib/libosqp.a -o osqp5x5_1
+
+Luego, para ejecutar:
+
+./osqp5x5_1
