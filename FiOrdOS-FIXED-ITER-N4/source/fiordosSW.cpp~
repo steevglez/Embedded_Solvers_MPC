@@ -1,0 +1,40 @@
+// Compilar: gcc fiordos_Cparam_main.c fiordos_Cparam_solver.c -lm -o fiordos_Cparam
+// Ejecutar: ./fiordos_Cparam
+
+#include "fiordosSW.h"
+
+void fiordosSW(elem H[N_QP *N_QP], elem h[N_QP], elem M[I_QP*N_QP], elem c[I_QP], elem tk[N_QP]){
+
+    /* define and initialize the four structs */	
+    fiordos2x2_Cparam_Params   params   = {0};
+    fiordos2x2_Cparam_Settings settings = {0};
+    fiordos2x2_Cparam_Result   result   = {0};
+    fiordos2x2_Cparam_Work     work     = {0};
+    
+    fiordos_Cparam_init(&params, &settings, &result, &work);
+    
+    /* define all parametric data */
+    int i;
+    for(i = 0 ; i < N_QP*N_QP ; i++){
+      params.H[i] = H[i];
+    }
+    for(i = 0 ; i < N_QP ; i++){
+      params.g[i] = h[i];
+    }
+    for(i = 0 ; i < I_QP*N_QP ; i++){
+      params.Ai[i] = M[i];
+    }
+    for(i = 0 ; i < I_QP ; i++){
+      params.bi[i] = c[i];
+    }
+    params.X1.rot[0] = 1;
+    params.X2.rot[0] = 1;
+    
+    /* solve the problem */
+    fiordos2x2_Cparam_solve(&params, &settings, &result, &work);
+
+    for(i = 0 ; i < N_QP ; i++){
+      tk[i] = result.x[i];
+    }
+
+}

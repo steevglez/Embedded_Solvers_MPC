@@ -1,0 +1,7 @@
+Para compilar solo un codigo, junto a los codigos fuente de FiOrdOS, se debe ingresar el comando:
+
+gcc fiordos_Cparam_main.c fiordos_Cparam_solver.c -lm -o MPCfiordos
+
+Luego, para ejecutar:
+
+./MPCfiordos
