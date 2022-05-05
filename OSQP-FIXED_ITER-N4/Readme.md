@@ -2,7 +2,7 @@
 
 Estos códigos C++ implementan MPC y utilizando al solver OSQP.
 
-## Requerimientos
+## Requerimientos y preparativos
 
 Para compilar los codigos de OSQP se necesita tener instalado el programa **cmake**.
 
